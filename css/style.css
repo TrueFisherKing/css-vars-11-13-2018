@@ -20,6 +20,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
 html,
 body,
 nav ul {
@@ -91,6 +96,7 @@ footer {
 }
 
 .blurbs {
+  --accent-color: #fff;
   color: var(--accent-color);
   display: grid;
   grid-gap: 40px;
