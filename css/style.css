@@ -75,8 +75,14 @@ header {
   width: 100%;
 }
 
-.big-hero h1 {
-  color: var(--primary-color);
+.swatches {
+  display: flex;
+}
+
+.swatches span {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
 }
 
 footer {
