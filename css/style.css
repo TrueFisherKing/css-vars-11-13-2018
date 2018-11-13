@@ -1,78 +1,99 @@
 :root {
-    --primary-color: #333745;
-    --secondary-color: #585B66;
-    --accent-color: #FE5F55;
-    --dark-color: #0A0A0D;
-    --light-color: #ECECEE;
+  --primary-color: #333745;
+  --secondary-color: #585b66;
+  --accent-color: #fe5f55;
+  --dark-color: #0a0a0d;
+  --light-color: #ececee;
+
+  --diptych-layout: 1fr;
+  --triptych-layout: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --diptych-layout: 1fr 1fr;
+    --triptych-layout: 1fr 1fr 1fr;
+  }
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body, nav ul {
-    margin: 0;
-    padding: 0;
+html,
+body,
+nav ul {
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    height: auto;
-    width: 100%;
-}
-
-.wrapper {
-    --primary-color: #f00;
-
+  height: auto;
+  width: 100%;
 }
 
 header {
-    background: var(--primary-color);
-    position: fixed;
-    width: 100%;
+  background: var(--primary-color);
+  position: fixed;
+  width: 100%;
 }
 
 .navigation {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .navigation li {
-    width: 100%;
+  width: 100%;
 }
 
 .navigation a {
-    color: #fff;
-    display: block;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
+  color: #fff;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 .navigation a:hover {
-    background: rgba(100%,100%,100%, 0.5);
-    color: var(--primary-color);
-    display: block;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
+  background: rgba(100%, 100%, 100%, 0.5);
+  color: var(--primary-color);
+  display: block;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 .big-hero {
-    align-items: center;
-    background-image: radial-gradient(circle, #fff, var(--primary-color), #fff);
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    width: 100%;
+  align-items: center;
+  background-image: radial-gradient(circle, #fff, var(--primary-color), #fff);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
 }
 
 .big-hero h1 {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 footer {
-    background: var(--primary-color);
-    height: 200px;
+  background: var(--primary-color);
+  min-height: 200px;
+}
+
+.blurbs {
+  color: var(--accent-color);
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: var(--triptych-layout);
+  padding: 40px;
+}
+
+.blurb {
+  border: 1px solid var(--accent-color);
+  padding: 10px;
+  text-align: center;
 }
